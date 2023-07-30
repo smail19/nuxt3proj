@@ -28,7 +28,7 @@ const emails =computed(()=>store.inboxEmails)
 
         <div class="container__checkbox-content">
             
-            <input  @change="store.setIsAllChecked" :value="store.isAllChecked"  type="checkbox" class="container__checkbox" id="emails-check-box" />
+            <input  @change="store.setIsAllChecked" :checked="store.isAllChecked"  type="checkbox" class="container__checkbox" id="emails-check-box" />
             <span class="container__text">Email Selected ({{ selectedEmails.length }})</span>
 
         </div>
