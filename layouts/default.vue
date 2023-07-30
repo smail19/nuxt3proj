@@ -62,7 +62,8 @@ console.log(window.innerHeight)
   width:16.25rem;
 }
 .container__page{
-  width: 63.8125rem;
+   width: 100%;
+   overflow-y: hidden;
 }
 .container__page-content{
 
