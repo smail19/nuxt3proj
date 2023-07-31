@@ -10,17 +10,12 @@ const archivedEmails = store.archivedEmails
     <div>
         <ul class="container__emails">
 
-<li v-for="email in archivedEmails" :key="email.id" class="container__email" >
-
-   
-
-    <label class="container__text">{{ email.subject }}</label>
-
-  </li>
-
-</ul>
-
-</div>
+            <li v-for="(email , index) in archivedEmails" :key="email.id" class="container__email" :class="index % 2 == 0 ? 'container__email--bg-color':''">
+               <label class="container__text">{{ email.subject }}</label>
+            </li>
+            
+        </ul>
+    </div>
 </template>
 
 <style scoped>
@@ -72,6 +67,8 @@ const archivedEmails = store.archivedEmails
 .container__email--disabled{
   opacity: 0.5;
 }
-
+.container__email--bg-color{
+  background-color:#F3F6FB;
+}
 
 </style>
